@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.example.subhankar29.test2.convertVid">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/converted_view"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GIF"
+            android:id="@+id/ButtonGif"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="gif"
+            android:layout_marginBottom="53dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SLOW"
+            android:id="@+id/ButtonSlow"
+            android:layout_alignTop="@+id/ButtonGif"
+            android:layout_toRightOf="@+id/ButtonGif"
+            android:layout_toEndOf="@+id/ButtonGif"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAST"
+            android:id="@+id/ButtonFast"
+            android:layout_alignTop="@+id/ButtonSlow"
+            android:layout_toRightOf="@+id/ButtonSlow"
+            android:layout_toEndOf="@+id/ButtonSlow"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INFINITE"
+            android:id="@+id/ButtonInfinite"
+            android:layout_alignTop="@+id/ButtonFast"
+            android:layout_alignRight="@+id/converted_view"
+            android:layout_alignEnd="@+id/converted_view"
+            android:onClick="infinte"
+            android:layout_marginLeft="7dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
